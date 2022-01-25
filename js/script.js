@@ -2,24 +2,18 @@
 // create an object called cat
 // give the object one property called complain
 // complain's value should be a method (a function) which logs the string "meow!"
-const cats = [
-  {
-    name: "Blob",
-    age: 10,
+const cat = {
+  complain: function () {
+    console.log("meow!");
   },
-  {
-    name: "Harold",
-  },
-  {
-    name: "Blurt",
-    age: 21,
-  },
-];
+};
+
+cat.complain();
 
 // Question 2
 // select the h3 from the HTML using the querySelector method and assign it to a variable called heading
 
-var heading = document.querySelector("h3");
+const heading = document.querySelector("h3");
 console.log(heading);
 heading.innerHTML = "Updated heading";
 
