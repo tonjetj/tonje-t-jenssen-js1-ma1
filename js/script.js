@@ -14,21 +14,26 @@ cat.complain();
 // select the h3 from the HTML using the querySelector method and assign it to a variable called heading
 
 const heading = document.querySelector("h3");
-console.log(heading);
+console.dir(heading);
 heading.innerHTML = "Updated heading";
 
 // Question 3
 // use the style property on the heading variable from the question above to change it's font size to "2em"
 
+heading.style.fontSize = "2em";
+
 // Question 4
 // add a class to the heading variable called subheading
+console.dir(heading.className);
+heading.className = "subheading";
+console.log(heading.className);
 
 // Question 5
 // write code that selects all the p elements on a page and assing them to a variable called paragraphs
 // loop through the p elements and change the colour of each to "red"
 
 const paragraphs = document.querySelectorAll("p");
-console.log(paragraphs);
+console.dir(paragraphs);
 
 for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.color = "red";
@@ -38,7 +43,7 @@ for (let i = 0; i < paragraphs.length; i++) {
 // select the div with a class of results, assign it to a variable called resultsContainer and set its innerHTML to be <p>New paragraph</p> and its background colour to be yellow
 
 const resultsContainer = document.querySelector(".results");
-console.log("resultsContainer");
+console.dir("resultsContainer");
 
 resultsContainer.innerHTML = "<p>New paragraph</p>";
 resultsContainer.style.backgroundColor = "yellow";
