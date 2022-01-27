@@ -27,8 +27,21 @@ heading.innerHTML = "Updated heading";
 // write code that selects all the p elements on a page and assing them to a variable called paragraphs
 // loop through the p elements and change the colour of each to "red"
 
+const paragraphs = document.querySelectorAll("p");
+console.log(paragraphs);
+
+for (let i = 0; i < paragraphs.length; i++) {
+  paragraphs[i].style.color = "red";
+}
+
 // Question 6
 // select the div with a class of results, assign it to a variable called resultsContainer and set its innerHTML to be <p>New paragraph</p> and its background colour to be yellow
+
+const resultsContainer = document.querySelector(".results");
+console.log("resultsContainer");
+
+resultsContainer.innerHTML = "<p>New paragraph</p>";
+resultsContainer.style.backgroundColor = "yellow";
 
 // Question 7
 // create a function that has one parameter called list
