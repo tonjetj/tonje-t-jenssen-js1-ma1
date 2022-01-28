@@ -71,9 +71,9 @@ function createCats(cats) {
   let html = "";
   for (let i = 0; i < cats.length; i++) {
     html += `<div>
-                <h5>Name:${cats[i].name}</h5>
-                <p>Age: ${cats[i].age}</p>
-            </div>`;
+                       <h5>Name:${cats[i].name}</h5>
+                       <p>Age: ${cats[i].age}</p>
+               </div>`;
   }
   return html;
 }
