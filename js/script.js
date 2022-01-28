@@ -1,3 +1,17 @@
+const cats = [
+  {
+    name: "Blob",
+    age: 10,
+  },
+  {
+    name: "Harold",
+  },
+  {
+    name: "Blurt",
+    age: 21,
+  },
+];
+
 // Question 1
 // create an object called cat
 // give the object one property called complain
@@ -53,8 +67,30 @@ resultsContainer.style.backgroundColor = "yellow";
 // inside the function, loop through the list parameter and console log the name property in each object
 // call the function and pass in the cats variable in the script.js file in the repo
 
+function printList(list) {
+  for (let i = 0; i < list.length; i++) {
+    console.log(list[i]);
+  }
+}
+
+printList(cats);
+
 // Question 8
 // create a function called createCats
 // the function will have one parameter called cats
 // inside the function loop through the value passed in as cats and create HTML for each object in the array
 // wrap each item in a div, each name property in an h5 tag and each age property in a p tag
+
+function createCats(cats) {
+  let html = "";
+  for (let i = 0; i < cats.length; i++) {
+    html += `<div>
+                <h5>Name:${cats[i].name}</h5>
+                <p>Age: ${cats[i].age}</p>
+            </div>`;
+  }
+  return html;
+}
+const newHTML = createCats(cats);
+const catContainer = document.querySelector(".cat-container");
+catContainer.innerHTML = newHTML;
